@@ -53,27 +53,27 @@ import Foundation
 }
 
 @objc public extension Logger {
-    static func appleError(_ message: String) {
+    @objc static func appleError(_ message: String) {
         log(level: .error, intent: .appleError, message: message)
     }
     
-    static func appleWarning(_ message: String) {
+    @objc static func appleWarning(_ message: String) {
         log(level: .warn, intent: .appleError, message: message)
     }
     
-    static func purchase(_ message: String) {
+    @objc static func purchase(_ message: String) {
         log(level: .debug, intent: .purchase, message: message)
     }
     
-    static func rcPurchaseSuccess(_ message: String) {
+    @objc static func rcPurchaseSuccess(_ message: String) {
         log(level: .info, intent: .rcPurchaseSuccess, message: message)
     }
     
-    static func rcSuccess(_ message: String) {
+    @objc static func rcSuccess(_ message: String) {
         log(level: .debug, intent: .rcSuccess, message: message)
     }
     
-    static func user(_ message: String) {
+    @objc static func user(_ message: String) {
         log(level: .debug, intent: .user, message: message)
     }
 }
